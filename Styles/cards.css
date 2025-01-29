@@ -1,3 +1,5 @@
+/* page header/title section */
+
 .section-title {
   text-align: center;
 }
@@ -6,7 +8,7 @@
   font-size: 32px;
   font-weight: 700;
   margin-top: 2em;
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
 }
 
 .section-title p {
@@ -26,9 +28,10 @@ p {
   unicode-bidi: isolate;
 }
 
-/*--------------------------------------------------------------
-# Featured Services Section
---------------------------------------------------------------*/
+/* END */
+
+/* Featured Services Section */
+
 .featured-services .card {
   background-color: var(--background-color);
   color: var(--default-color);
@@ -43,7 +46,11 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(0, 0, 0, 0.9) 75%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 25%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
   z-index: 2;
 }
 
@@ -67,14 +74,14 @@ p {
 }
 
 .featured-services .card .card-body h3 {
-    font-size: 1.25em;
-    margin-bottom: 0em;
-    padding-left: 0.625em;
-    transition: 0.5s ease-in-out;
-    border-left: 3px solid var(--accent-color);
-  }
-  
-  .featured-services .card .card-body h3 a {
+  font-size: 1.25em;
+  margin-bottom: 0em;
+  padding-left: 0.625em;
+  transition: 0.5s ease-in-out;
+  border-left: 3px solid var(--accent-color);
+}
+
+.featured-services .card .card-body h3 a {
   font-weight: 700;
   color: var(--contrast-color);
 }
@@ -97,15 +104,7 @@ p {
   color: var(--contrast-color);
 }
 
-
-/* .featured-services .card:hover .card-content {
-  grid-template-rows: 1fr;
-  /* transform: translateY(0%); */
-  /* visibility: visible; */
-  /* opacity: 1; */
-/* } */
-
- .featured-services .card:hover .card-content {
+.featured-services .card:hover .card-content {
   grid-template-rows: 1fr;
   transform: translateY(0%);
   visibility: visible;
@@ -114,4 +113,28 @@ p {
 
 .featured-services .card:hover .card-body h3 {
   transform: translateY(35%);
+}
+
+/* END */
+
+/* responsive media queries */
+
+@media (max-width: 1251px) {
+  .featured-services .card img {
+    object-position: center center;
+  }
+
+  .featured-services .card:hover .card-body h3 {
+    transform: translateY(15%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .featured-services .card img {
+    object-position: center center;
+  }
+
+  .featured-services .card:hover .card-body h3 {
+    transform: translateY(15%);
+  }
 }
